@@ -31,6 +31,7 @@ export default class TextField extends PureComponent {
     animationDuration: 225,
 
     fontSize: 16,
+    Component: TextInput,
     titleFontSize: 12,
     labelFontSize: 12,
     labelHeight: 32,
@@ -341,6 +342,7 @@ export default class TextField extends PureComponent {
       labelHeight,
       labelPadding,
       inputContainerPadding,
+      Component,
       labelTextStyle,
       titleTextStyle,
       tintColor,
@@ -516,7 +518,7 @@ export default class TextField extends PureComponent {
           <View style={styles.row}>
             {this.renderAffix('prefix', active, focused)}
 
-            <TextInput
+            <Component
               style={[styles.input, inputStyle, inputStyleOverrides]}
               selectionColor={tintColor}
 
